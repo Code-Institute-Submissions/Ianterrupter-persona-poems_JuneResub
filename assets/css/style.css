@@ -18,7 +18,7 @@ body {
 /* Quiz area */
 
 .quiz-area {
-    height: 40rem;
+    height: 50rem;
     background-color: grey;
     margin: 0 20% 0 20%;
     border-radius: 3rem;
@@ -38,4 +38,26 @@ body {
     cursor: pointer;
     margin: 0% auto;
     margin-bottom: 1rem;
+}
+
+/* Navigation Buttons */
+
+.navigation-left {
+    display: flexbox;
+    width: 30%;
+    background-color: whitesmoke;
+    padding: 2rem;
+    cursor: pointer;
+    margin: 5rem 0 3rem 3rem;
+    float: left;
+}
+
+.navigation-right {
+    display: flexbox;
+    width: 30%;
+    background-color: whitesmoke;
+    padding: 2rem;
+    cursor: pointer;
+    margin: 5rem 3rem 3rem 0;
+    float: right;
 }
