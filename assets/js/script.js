@@ -23,13 +23,56 @@ const questionsList = [
     }
 ];
 
+
+// Question Counter
+
+let questionCounter = 0;
+
 // Questions
 
 let question = document.getElementById("main-question");
-question.innerHTML = questionsList[0].question;
 
 let options = document.getElementsByClassName("question-answer");
-options[0].innerHTML = questionsList[0].options[0];
-options[1].innerHTML = questionsList[0].options[1];
-options[2].innerHTML = questionsList[0].options[2];
-options[3].innerHTML = questionsList[0].options[3];
+
+function questionDisplay() {
+    
+    question.innerHTML = questionsList[questionCounter].question;
+
+    options[0].innerHTML = questionsList[questionCounter].options[0];
+    options[1].innerHTML = questionsList[questionCounter].options[1];
+    options[2].innerHTML = questionsList[questionCounter].options[2];
+    options[3].innerHTML = questionsList[questionCounter].options[3];
+}
+
+// Navigation
+
+function nextQuestion() {
+    questionCounter++;
+    questionDisplay();
+}
+
+let navigationRight = document.getElementById("navigation-right");
+
+navigationRight.addEventListener('click', nextQuestion);
+
+function previousQuestion() {
+    questionCounter--;
+    questionDisplay();
+}
+
+let navigationLeft = document.getElementById("navigation-left");
+
+navigationLeft.addEventListener('click', previousQuestion);
+
+for (let i = 0; i < options.length; i++) {
+    
+    options[i].addEventListener('click', nextQuestion);
+}
+
+questionDisplay();
+
+//add event listener for next button
+//next ++i and update question/options
+
+//add event listener for previous button
+//next --i and update question/options
