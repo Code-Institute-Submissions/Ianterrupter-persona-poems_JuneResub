@@ -44,11 +44,22 @@ function questionDisplay() {
     options[3].innerHTML = questionsList[questionCounter].options[3];
 }
 
+// Poem
+
+function displayPoem() {
+    
+}
+
 // Navigation
 
 function nextQuestion() {
     questionCounter++;
-    questionDisplay();
+    if (questionCounter > 5) {
+        displayPoem();
+    } else {
+        questionDisplay();
+    }
+
 }
 
 let navigationRight = document.getElementById("navigation-right");
@@ -64,15 +75,20 @@ let navigationLeft = document.getElementById("navigation-left");
 
 navigationLeft.addEventListener('click', previousQuestion);
 
-for (let i = 0; i < options.length; i++) {
-    
-    options[i].addEventListener('click', nextQuestion);
-}
 
 questionDisplay();
 
-//add event listener for next button
-//next ++i and update question/options
+// Stored Answers
 
-//add event listener for previous button
-//next --i and update question/options
+let answersProvided = Array(5).fill("No Answer Provided");
+
+function storeAnswers(option) {
+    answersProvided[questionCounter] = option.innerHTML;
+    nextQuestion();
+}
+
+for (let i = 0; i < options.length; i++) {
+
+    options[i].addEventListener('click', storeAnswers());
+}
+
