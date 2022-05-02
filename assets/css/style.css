@@ -10,6 +10,17 @@ body {
 
 /* Heading */
 
+h3 {
+    font-family: 'Varela Round', sans-serif;
+    text-align: center;
+}
+
+p {
+    padding-top: 1rem;
+    font-family: 'Varela Round', sans-serif;
+    text-align: center;
+}
+
 .heading {
     text-align: center;
     font-family: 'Varela Round', sans-serif;
@@ -43,6 +54,13 @@ body {
     border-radius: 3rem;
 }
 
+#poem {
+    padding: 2rem;
+    text-align: center;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 70%;
+}
+
 /* Navigation Buttons */
 
 #navigation-left {
@@ -72,4 +90,15 @@ body {
     position: absolute;
     bottom: 20px;
     right: 20px;
+}
+
+#restart-button {
+    display: block;
+    width: 30%;
+    background-color: whitesmoke;
+    padding: 2rem;
+    cursor: pointer;
+    margin: 0% auto;
+    border-radius: 3rem;
+
 }
