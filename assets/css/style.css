@@ -22,6 +22,7 @@ body {
     background-color: grey;
     margin: 0 20% 0 20%;
     border-radius: 3rem;
+    position: relative;
 }
 
 #main-question {
@@ -39,6 +40,7 @@ body {
     cursor: pointer;
     margin: 0% auto;
     margin-bottom: 1rem;
+    border-radius: 3rem;
 }
 
 /* Navigation Buttons */
@@ -51,6 +53,11 @@ body {
     cursor: pointer;
     margin: 2.5rem 0 3rem 3rem;
     float: left;
+    border-radius: 3rem;
+    position: absolute;
+    
+    bottom: 20px;
+    left: 20px;
 }
 
 #navigation-right {
@@ -61,4 +68,8 @@ body {
     cursor: pointer;
     margin: 2.5rem 3rem 3rem 0;
     float: right;
+    border-radius: 3rem;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
 }

@@ -3,23 +3,28 @@
 const questionsList = [
     {
         question: "Which of the below movies best describes you?",
-        options: ["Pulp Fiction", "The Notebook", "The Hangover", "Die Hard"]
+        options: ["Pulp Fiction", "The Notebook", "The Hangover", "Die Hard"],
+        answers: ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4' ]
     },
     {
         question : "Which of the below books best describes you?",
-        options: ["The Hunger Games", "Twilight", "1984", "A Short History of Nearly Everything"]
+        options: ["The Hunger Games", "Twilight", "1984", "A Short History of Nearly Everything"],
+        answers: ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4' ]
     },
     {
         question : "Which of the below foods do you like the most?",
-        options: ["Fried Chicken", "Caesar Salad", "Pepperoni Pizza", "Steak tartare"]
+        options: ["Fried Chicken", "Caesar Salad", "Pepperoni Pizza", "Steak tartare"],
+        answers: ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4' ]
     },
     {
         question : "If you were one of these drinks, what would you be?",
-        options: ["Beer", "Spirit", "Cocktail", "Anything wet"]
+        options: ["Beer", "Spirit", "Cocktail", "Anything wet"],
+        answers: ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4' ]
     },
     {
-        question : "City or Beach?",
-        options: ["City", "Beach"]
+        question : "City, Beach, Countryside or Mountain?",
+        options: ["City", "Beach", "Countryside", "Mountain"],
+        answers: ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4' ]
     }
 ];
 
@@ -27,6 +32,11 @@ const questionsList = [
 // Question Counter
 
 let questionCounter = 0;
+const questionNumber = options.length;
+
+// Array of Answers
+
+let answers = [];
 
 // Questions
 
@@ -53,10 +63,10 @@ function displayPoem() {
 // Navigation
 
 function nextQuestion() {
-    questionCounter++;
     if (questionCounter > 5) {
         displayPoem();
     } else {
+        questionCounter++;
         questionDisplay();
     }
 
@@ -67,8 +77,10 @@ let navigationRight = document.getElementById("navigation-right");
 navigationRight.addEventListener('click', nextQuestion);
 
 function previousQuestion() {
-    questionCounter--;
-    questionDisplay();
+    if (questionCounter > 0) {
+        questionCounter--;
+        questionDisplay();
+    }
 }
 
 let navigationLeft = document.getElementById("navigation-left");
