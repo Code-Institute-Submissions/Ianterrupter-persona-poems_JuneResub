@@ -61,6 +61,14 @@ p {
     font-size: 70%;
 }
 
+#answers {
+    position: absolute;
+    bottom: 150px;
+    display: block;
+    margin: 0% auto;
+    width: 100%;
+}
+
 /* Navigation Buttons */
 
 #navigation-left {
@@ -73,7 +81,6 @@ p {
     float: left;
     border-radius: 3rem;
     position: absolute;
-    
     bottom: 20px;
     left: 20px;
 }
