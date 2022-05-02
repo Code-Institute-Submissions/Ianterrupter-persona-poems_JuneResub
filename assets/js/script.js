@@ -43,11 +43,18 @@ let question = document.getElementById("main-question");
 let options = document.getElementsByClassName("question-answer");
 let optionsList = document.getElementById("answers");
 let buttons = document.getElementById("nav-buttons");
+let startButton = document.getElementById("start-button");
 
 let optionCount = options.length;
 function questionDisplay() {
     
     question.innerHTML = questionsList[questionCounter].question;
+
+    optionsList.style.visibility = "visible";
+    navigationLeft.style.visibility = "visible";
+    navigationRight.style.visibility = "visible";
+    
+    startButton.style.visibility = "hidden";
 
     for (let i = 0; i < optionCount; i++) {
         let option = options[i];
@@ -167,6 +174,19 @@ function saveAnswer() {
     answers[questionCounter] = this.dataset.indexNumber;
 }
 
+// Start questions
+
+function startDisplay() {
+    question.innerHTML = "What's your personality poem?"
+
+    optionsList.style.visibility = "hidden";
+    navigationLeft.style.visibility = "hidden";
+    navigationRight.style.visibility = "hidden";
+
+    startButton.addEventListener('click', questionDisplay);
+
+}
+
 window.addEventListener('load', (event) => {
-    questionDisplay();
+    startDisplay();
 });
