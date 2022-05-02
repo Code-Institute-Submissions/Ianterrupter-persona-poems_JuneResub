@@ -4,27 +4,27 @@ const questionsList = [
     {
         question: "Which of the below movies best describes you?",
         options: ["Pulp Fiction", "The Notebook", "The Hangover", "Die Hard"],
-        answers: ["You enjoy the more quirky things in life, ", "A lifelong romantic,", 'Answer 3', 'Answer 4' ]
+        answers: ["An ostentatious figure, ", "A lifelong romantic,", "With an air of levity,", "Some might call you bullish," ]
     },
     {
         question : "Which of the below books best describes you?",
         options: ["The Hunger Games", "Twilight", "1984", "A Short History of Nearly Everything"],
-        answers: ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4' ]
+        answers: ["You appreciate the struggle,", "You're inspired by the curious,", "You look beneath the liminal,", "You strive for the greater meaning," ]
     },
     {
         question : "Which of the below foods do you like the most?",
         options: ["Fried Chicken", "Caesar Salad", "Pepperoni Pizza", "Steak tartare"],
-        answers: ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4' ]
+        answers: ["Action, immediacy is best,", "Prudent, think before you act,", "Unfamiliar, something different but not quite,", "Elegance, the finer things are necessary," ]
     },
     {
         question : "If you were one of these drinks, what would you be?",
         options: ["Beer", "Spirit", "Cocktail", "Anything wet"],
-        answers: ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4' ]
+        answers: ["You care not to rock the boat,", "There is a fire inside you,", "Full of poise, finesse,", "You enjoy the anarchy," ]
     },
     {
-        question : "City, Beach, Countryside or Mountain?",
+        question : "Where would you most enjoy being?",
         options: ["City", "Beach", "Countryside", "Mountain"],
-        answers: ['Answer 1', 'Answer 2', 'Answer 3', 'Answer 4' ]
+        answers: ["The bustle is your nature.", "Bright repose is your endgame.", "You yearn for the hinterland.", "Steep solitude waits on you." ]
     }
 ];
 
