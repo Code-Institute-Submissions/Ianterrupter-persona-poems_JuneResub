@@ -1,8 +1,12 @@
 /* Import links */
 
-@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
 
 /*  Global style */
+* {
+    padding: 0;
+    margin: 0;
+}
 
 body {
     background-color: whitesmoke;
@@ -11,36 +15,51 @@ body {
 /* Heading */
 
 h3 {
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Playfair Display', serif;
     text-align: center;
 }
 
 p {
     padding-top: 1rem;
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Playfair Display', serif;
     text-align: center;
 }
 
 .heading {
-    text-align: center;
-    font-family: 'Varela Round', sans-serif;
+    padding: 1rem;
+    text-align: left;
+    font-family: 'Playfair Display', serif;
+    font-size: 250%;
+}
+
+#hero-image {
+    width: 100%;
+    height: 1000px;
+    background: url(/assets/images/books-large.jpg);
+    opacity: 0.9;
 }
 
 /* Quiz area */
 
 .quiz-area {
     height: 50rem;
-    background-color: grey;
+    background-color: rgb(220, 86, 52);
     margin: 0 20% 0 20%;
     border-radius: 3rem;
     position: relative;
+    opacity: 0.95;
 }
 
 #main-question {
     font-size: 2rem;
-    padding: 2rem;
+    padding-top: 2rem;
     text-align: center;
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Playfair Display', serif;
+    position: absolute;
+    top: 25px;
+    display: block;
+    margin: 0% auto;
+    width: 100%;
 }
 
 .question-answer {
@@ -57,13 +76,13 @@ p {
 #poem {
     padding: 2rem;
     text-align: center;
-    font-family: 'Varela Round', sans-serif;
+    font-family: 'Playfair Display', serif;
     font-size: 70%;
 }
 
 #answers {
     position: absolute;
-    bottom: 150px;
+    bottom: 220px;
     display: block;
     margin: 0% auto;
     width: 100%;
@@ -111,10 +130,14 @@ p {
 
 #start-button {
     display: block;
+    position: absolute;
     width: 30%;
     background-color: whitesmoke;
     padding: 2rem;
     cursor: pointer;
-    margin: 0% auto;
     border-radius: 3rem;
+    top: 140px;
+    text-align:center;
+    margin-left: 35%;
+    margin-right: 35%
 }

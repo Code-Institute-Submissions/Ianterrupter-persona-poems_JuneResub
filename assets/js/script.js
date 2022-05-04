@@ -146,11 +146,7 @@ function restartQuestions() {
 function nextQuestion() {
     questionCounter++;
     
-    if (questionCounter > optionCount) {
-        displayPoem();
-        return;
-    }
-    questionDisplay();
+    (questionCounter > optionCount)? displayPoem(): questionDisplay();
 }
 
 let navigationRight = document.getElementById("navigation-right");
