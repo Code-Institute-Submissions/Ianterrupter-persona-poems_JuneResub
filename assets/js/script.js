@@ -50,10 +50,8 @@ function questionDisplay() {
     
     question.innerHTML = questionsList[questionCounter].question;
 
-    optionsList.style.visibility = "visible";
-    navigationLeft.style.visibility = "visible";
-    navigationRight.style.visibility = "visible";
-    
+    changeOptionsAndNavigationVisibility("visible");
+
     startButton.style.visibility = "hidden";
 
     for (let i = 0; i < optionCount; i++) {
@@ -83,7 +81,6 @@ function displayPoem() {
     question.innerHTML = "Thank you for your time..."
 
     // Makes poem...
-
     let heading = "<h3>... here's a little poem based on your answers!</h3>";
 
     for (let i = 0; i < answers.length; i++) {
@@ -101,25 +98,15 @@ function displayPoem() {
 
     question.appendChild(poem);
 
-    // Removes answers...
-
-    optionsList.style.visibility = "hidden";
-
-    // Hides buttons...
-
-    navigationLeft.style.visibility = "hidden";
-    navigationRight.style.visibility = "hidden";
+    // Hides answers and navigation buttons...
+    changeOptionsAndNavigationVisibility("hidden");
 
     let restartButton = document.createElement("button");
 
     restartButton.setAttribute("id","restart-button");
-
     restartButton.innerHTML = "<i class='fa-solid fa-arrow-rotate-left'></i>";
-
     question.appendChild(restartButton);
-
     restartButton.addEventListener('click', restartQuestions);
-   
 }
 
 function restartQuestions() {
@@ -127,10 +114,8 @@ function restartQuestions() {
     questionCounter = 0;
     answers = [];
 
-    optionsList.style.visibility = "visible";
+    changeOptionsAndNavigationVisibility("visible");
 
-    navigationLeft.style.visibility = "visible";
-    navigationRight.style.visibility = "visible";
 
     let restartButton = document.getElementById("restart-button");
     restartButton.remove();
@@ -145,12 +130,10 @@ function restartQuestions() {
 
 function nextQuestion() {
     questionCounter++;
-    
     (questionCounter > optionCount)? displayPoem(): questionDisplay();
 }
 
 let navigationRight = document.getElementById("navigation-right");
-
 navigationRight.addEventListener('click', nextQuestion);
 
 function previousQuestion() {
@@ -161,7 +144,6 @@ function previousQuestion() {
 }
 
 let navigationLeft = document.getElementById("navigation-left");
-
 navigationLeft.addEventListener('click', previousQuestion);
 
 // Stored Answers
@@ -174,13 +156,15 @@ function saveAnswer() {
 
 function startDisplay() {
     question.innerHTML = "What's your personality poem?"
-
-    optionsList.style.visibility = "hidden";
-    navigationLeft.style.visibility = "hidden";
-    navigationRight.style.visibility = "hidden";
+    changeOptionsAndNavigationVisibility("hidden");
 
     startButton.addEventListener('click', questionDisplay);
+}
 
+function changeOptionsAndNavigationVisibility(visibility) {
+    optionsList.style.visibility = visibility;
+    navigationLeft.style.visibility = visibility;
+    navigationRight.style.visibility = visibility;
 }
 
 window.addEventListener('load', (event) => {
