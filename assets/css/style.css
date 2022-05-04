@@ -91,7 +91,6 @@ p {
 /* Navigation Buttons */
 
 #navigation-left {
-    display: flexbox;
     width: 30%;
     background-color: whitesmoke;
     padding: 2rem;
@@ -105,7 +104,6 @@ p {
 }
 
 #navigation-right {
-    display: flexbox;
     width: 30%;
     background-color: whitesmoke;
     padding: 2rem;
@@ -140,6 +138,23 @@ p {
     text-align:center;
     margin-left: 35%;
     margin-right: 35%
+}
+
+#copyright {
+    text-align: center;
+    font-size: 16px;
+    margin: 20px 0;
+    line-height: 1.5em;
+    font-family: Fredoka, sans-serif;
+}
+
+#copyright a {
+    text-decoration: none;
+    color:black;
+}
+#copyright a:hover,
+#copyright a:focus {
+    text-decoration: underline;
 }
 
 @media screen and (max-width: 768px) {
