@@ -42,7 +42,6 @@ let answers = [];
 let question = document.getElementById("main-question");
 let options = document.getElementsByClassName("question-answer");
 let optionsList = document.getElementById("answers");
-let buttons = document.getElementById("nav-buttons");
 let startButton = document.getElementById("start-button");
 
 let optionCount = options.length;
@@ -78,7 +77,7 @@ function questionDisplay() {
 
 function displayPoem() {
 
-    question.innerHTML = "Thank you for your time..."
+    question.innerHTML = "Thank you for your time...";
 
     // Makes poem...
     let heading = "<h3>... here's a little poem based on your answers!</h3>";
@@ -86,7 +85,7 @@ function displayPoem() {
     for (let i = 0; i < answers.length; i++) {
         let index = answers[i];
         let question = questionsList[i];
-        let answer = question['answers'][index];
+        let answer = question.answers[index];
         heading += '<p>' + answer + '</p>';
     }
 
@@ -130,7 +129,9 @@ function restartQuestions() {
 
 function nextQuestion() {
     questionCounter++;
-    (questionCounter > optionCount)? displayPoem(): questionDisplay();
+		const isQuestionsCompleted = questionCounter > optionCount;
+    const display = isQuestionsCompleted? displayPoem(): questionDisplay();
+  	display();
 }
 
 let navigationRight = document.getElementById("navigation-right");
@@ -155,7 +156,7 @@ function saveAnswer() {
 // Start questions
 
 function startDisplay() {
-    question.innerHTML = "What's your personality poem?"
+    question.innerHTML = "What's your personality poem?";
     changeOptionsAndNavigationVisibility("hidden");
 
     startButton.addEventListener('click', questionDisplay);
