@@ -1,41 +1,54 @@
 # Persona Poems
+A vibrant, simple site designed to provide a short personality poem based on the user's answers. 
+
+The site was intended to have a warm welcome and simple structure. I did not want to overwhelm the site with unnecessary features as the main obective is to deliver a short piece of writing to entertain the user. 
+
 ![Hero Image](./assets/images/readme-image.png)
 
 [Live project available here](http://ian-downey.xyz/persona-poems)
 
 
-
-A vibrant, simple site designed to provide a short personality poem based on the user's answers. 
-
-## Description
-
-The site was intented to have a warm welcome and simple structure. I did not want to overwhelm the site with unnecessary features as the main obective is to deliver a short piece of writing to entertain the user. 
-  
-## Features
+# Features
+## Existing Features
  
  - Favicon
  - Single page (simplicity)
  - Responsivity - site responds to M + L Phone, tablet, laptop and computer
  - Clickable Trademark hyperlinking to email
- - Personality quiz in JS which saves answers, using them to create a poem
- - Start, Navigation and Restart buttons
+ - Header & Start button - a header in the top left corner to display the name of the site, and a start button to prompt the user to begin the set of questions.
 
+![Start button](./assets/images/start.png)
+- Navigation and Restart buttons - there is a left and right navigation button below list of answers that will help users navigate the questions, allowing them to select different answers to previously asked questions. Restart button is presented at the end below the poem to allow the user to start again!
 
-## Testing
+![Questions](./assets/images/questions.png)
+
+![Restart](./assets/images/restart.png)
+
+## Future Features
+ - Have questions with less/more than 4 answers
+ - Improve the fluidity of the rhyming! :-)
+ - Have a default line for unanswered questions
+
+# Testing
 
 For validating my code I used:
 
 - W3C Markup Validator
+  - No errors were returned when passed through
 - W3C CSS Validator
+  - No errors were returned when passed through
+- JSHint
+  - No errors were returned when passed through
 
 Tested project on web.dev, receiving the following scores:
 
 - Performance: 72 
-- Accesibility: 79
+- Accesibility: 81
 - Best Practices: 92 
 - SEO: 91
 
-## Bugs, Problems
+
+# Bugs, Problems
 
 Throughout my project, I encountered many problems and bugs, especially when coding the JavaScript section. This was the most difficult section, as multiple times I needed to rework how the logic of the poem worked.
 
@@ -46,7 +59,7 @@ One of my major issues was the logic of the poem and how the sentences were pull
 - User can skip question, leaving 'undefined' as answer in final poem. This can be fixed by removing the right navigation or having a default answer for each question.
 - Left navigation doesn't do anything on the first question. This can be removed or returns the user to the start page. 
 
-## Technology
+# Technology
 
 - Github
 - Gitpod
@@ -59,7 +72,13 @@ One of my major issues was the logic of the poem and how the sentences were pull
 - Icons8
 - Markdown
 
-## Acknowledgements
+# Deployment
+- The site was deployed to GitHub pages. The steps to deploy are as follows:
+  - In the GitHub repository, navigate to the Settings tab
+  - From the source section drop-down menu, select the Master Branch
+  - Once the master branch has been selected, the page provided the link to the completed website
+
+# Acknowledgements
 
 Special thanks to my girlfriend, Grace and my brother, Colin. They gave me invaluable support and guidance through my project yet again, so thank you guys!!
 
